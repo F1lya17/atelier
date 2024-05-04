@@ -1,38 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: center / cover no-repeat
+    url("https://media.admagazine.ru/photos/61407a55f7d862083662be2b/master/w_1600%2Cc_limit/atelier%2520web%2520(17%2520of%252030).jpg");
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  flex: 1 1 auto;
+  width: 75%;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+body::-webkit-scrollbar,
+body *::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body::-webkit-scrollbar-thumb,
+body *::-webkit-scrollbar-thumb {
+  background: #8d96a2;
+  border-radius: 10px;
+  border: 3px solid #f9f8fb;
+}
+
+body::-webkit-scrollbar-track,
+body *::-webkit-scrollbar-track {
+  background: #f9f8fb;
+  border-radius: 10px;
 }
