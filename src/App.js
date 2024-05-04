@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
     if (localStorage.getItem("auth")) {
-      user.setIsAuth(true);
+      setIsAuth(true);
     }
   }, []);
 
