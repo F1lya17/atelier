@@ -1,10 +1,11 @@
 import { useMemo } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { services } from "../data";
 import { Button } from "@mui/material";
 
 export const ServicePage = () => {
   const { pathname } = useLocation();
+  const navigate = useNavigate();
 
   const serviceId = pathname.replace(/[^0-9]/g, "");
   const service = useMemo(() => {
@@ -20,7 +21,9 @@ export const ServicePage = () => {
       <div className="text-center">{service.description}</div>
       <div className="w-1/2 h-px bg-slate-700" />
       <div className="text-center">{service.info}</div>
-      <Button variant="contained">Сделать заказ</Button>
+      <Button variant="contained" onClick={() => navigate("/order")}>
+        Сделать заказ
+      </Button>
     </div>
   );
 };

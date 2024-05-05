@@ -9,6 +9,7 @@ export const Context = createContext(null);
 
 function App() {
   const [isAuth, setIsAuth] = useState(false);
+  const [orders, setOrders] = useState([]);
 
   useEffect(() => {
     if (localStorage.getItem("auth")) {
@@ -17,7 +18,7 @@ function App() {
   }, []);
 
   return (
-    <Context.Provider value={{ isAuth, setIsAuth }}>
+    <Context.Provider value={{ isAuth, setIsAuth, orders, setOrders }}>
       <BrowserRouter>
         <div className="flex flex-col min-h-screen">
           <Header />
